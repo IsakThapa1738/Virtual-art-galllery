@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Art Gallery - Explore</title>
+  <link rel="stylesheet" href="Assets/css/explore.css">
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <img src="Assets/img/logo.png" alt="Artiverse Logo">
+      <div id="nav-part2">
+          <div class="menu-icon" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <div id="menu-links">
+              <h4><a href="explore.html">Explore</a></h4>
+              <h4><a href="about.html">About</a></h4>
+              <h4><a href="login.html">Login</a></h4>
+              <h4><a href="login.html">Register</a></h4>
+          </div>
+      </div>
+  </nav>
+  </header>
+
+  <main>
+    <section class="search-filter">
+      <div class="container">
+        <h2>Search & Filter</h2>
+        <form action="#">
+          <input type="text" placeholder="Search by title, artist, or keyword">
+          <select name="medium">
+            <option value="">All Mediums</option>
+            <option value="painting">Painting</option>
+            <option value="sculpture">Sculpture</option>
+            <option value="photography">Photography</option>
+          </select>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="art-grid">
+      <div class="container">
+        <!-- Art pieces will be dynamically loaded here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Virtual Art Gallery 2024</p>
+    </div>
+  </footer>
+
+  <script src="Assets/js/min.js"></script>
+</body>
+</html>

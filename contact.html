@@ -4,13 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Assets/css/contact.css" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-
-    ></script>
   </head>
   <body>
+    <nav id="navbar">
+      <img src="Assets/img/logo.png" alt="Artiverse Logo">
+      <div id="nav-part2">
+          <div id="menu-links">
+              <h4><a href="explore.html">Explore</a></h4>
+              <h4><a href="about.html">About</a></h4>
+              <h4><a href="login.html">Login</a></h4>
+              <h4><a href="login.html">Register</a></h4>
+              <div class="profile-dropdown">
+                  <div onclick="toggle()" class="profile-dropdown-btn">
+                      
+                          <h4><a href="#" class="user-menu">Midi
+                              <div class="profile-img">
+                                  <img src="Assets/img/client1.jpg" alt="">
+                                </div>
+                          </a></h4>
+              
+              
+                  </div>
+                  <ul class="profile-dropdown-list">
+                      <li class="profile-dropdown-list-item">
+                          <a href="useraccount.html">
+                              <i class="fa-regular fa-user"></i>
+                              Edit Profile
+                          </a>
+                      </li>
+                      <li class="profile-dropdown-list-item">
+                          <a href="#">
+                              <i class="fa-regular fa-envelope"></i>
+                              Inbox
+                          </a>
+                      </li>
+                      <li class="profile-dropdown-list-item">
+                          <a href="#">
+                              <i class="fa-solid fa-chart-line"></i>
+                              Analytics
+                          </a>
+                      </li>
+                      <li class="profile-dropdown-list-item">
+                          <a href="#">
+                              <i class="fa-solid fa-sliders"></i>
+                              Settings
+                          </a>
+                      </li>
+                      <li class="profile-dropdown-list-item">
+                          <a href="#">
+                              <i class="fa-regular fa-circle-question"></i>
+                              Help & Support
+                          </a>
+                      </li>
+                      <hr />
+                      <li class="profile-dropdown-list-item">
+                          <a href="#">
+                              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                              Log out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              
+      
+         
+      </div>
+          <div class="menu-icon" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+         
+  </nav>
     <div class="container">
       <div class="form">
         <div class="contact-info">
@@ -83,6 +150,8 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="Assets/js/min.js"></script>
   </body>
 </html>

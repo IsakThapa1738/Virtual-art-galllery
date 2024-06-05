@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Assets/css/editprofile.css">
+    <title>Edit Profile | Artiverse</title>
+</head>
+
+<body>
+    <div id="main">
+        <nav id="navbar">
+            <img src="Assets/img/logo.png" alt="Artiverse Logo">
+            <div id="nav-part2">
+                <div id="menu-links">
+                    <h4><a href="explore.html">Explore</a></h4>
+                    <h4><a href="about.html">About</a></h4>
+                    <h4><a href="login.html">Login</a></h4>
+                    <h4><a href="register.html">Register</a></h4>
+                    <div class="profile-dropdown">
+                        <div onclick="toggle()" class="profile-dropdown-btn">
+                            <h4><a href="#" class="user-menu">Midi
+                                <div class="profile-img">
+                                    <img src="Assets/img/client1.jpg" alt="">
+                                </div>
+                            </a></h4>
+                        </div>
+                        <ul class="profile-dropdown-list">
+                            <li class="profile-dropdown-list-item">
+                                <a href="useraccount.html">
+                                    <i class="fa-regular fa-user"></i>
+                                    Edit Profile
+                                </a>
+                            </li>
+                            <li class="profile-dropdown-list-item">
+                                <a href="#">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                            <li class="profile-dropdown-list-item">
+                                <a href="#">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                    Analytics
+                                </a>
+                            </li>
+                            <li class="profile-dropdown-list-item">
+                                <a href="#">
+                                    <i class="fa-solid fa-sliders"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="profile-dropdown-list-item">
+                                <a href="#">
+                                    <i class="fa-regular fa-circle-question"></i>
+                                    Help & Support
+                                </a>
+                            </li>
+                            <hr />
+                            <li class="profile-dropdown-list-item">
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="edit-profile-container">
+            <div class="form-container">
+                <form>
+                    <h1>Edit Profile</h1>
+                    <div class="profile-picture">
+                        <img src="Assets/img/client1.jpg" alt="Profile Picture">
+                        <input type="file" id="profilePic" name="profilePic" accept="image/*">
+                    </div>
+                    <div class="input-container">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="New Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <textarea placeholder="Bio" rows="4"></textarea>
+                    </div>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1>Artiverse</h1>
+                <p>Where imagination meets canvas.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-twitter-512.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Artiverse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="Assets/js/min.js"></script>
+    
+</body>
+
+</html>

@@ -18,7 +18,6 @@ html, body {
 #page1 {
     min-height: 100vh;
     width: 100%;
-   
     position: relative;
     padding: 0 38px;
 }
@@ -32,7 +31,8 @@ nav {
     justify-content: space-between;
     top: 0;
     left: 0;
-
+    z-index: 20;
+    position: relative;
 }
 
 nav img {
@@ -50,7 +50,7 @@ nav img {
 #nav-part2 h4 {
     padding: 10px 20px;
     font-weight: 500;
-    color: #000000bb;
+
     transition: all ease 0.4s;
     position: relative;
     font-size: 18px;
@@ -75,7 +75,6 @@ nav img {
 }
 
 #nav-part2 h4 a {
-    color: black;
     text-decoration: none;
     position: relative;
     z-index: 9;
@@ -84,7 +83,7 @@ nav img {
 #nav-part2 h4:hover a {
     color: #fff;
 }
-
+/* hamburger menu */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -92,8 +91,8 @@ nav img {
     width: 25px;
     height: 25px;
     cursor: pointer;
-    z-index: 1001; 
 }
+
 
 .bar {
     width: 100%;
@@ -105,29 +104,29 @@ nav img {
 #menu-links {
     display: flex;
     align-items: center;
-    
 }
 
 #menu-links h4 {
     padding: 10px 20px;
-    
     border-radius: 50px;
     font-weight: 500;
     color: #000000bb;
     transition: all ease 0.4s;
     position: relative;
     font-size: 18px;
-    overflow: hidden;
+   
 }
 
 #menu-links h4 a {
     color: black;
     text-decoration: none;
+
 }
 
 #menu-links h4:hover a {
     color: #fff;
 }
+
 
 /* Media Query for Hamburger Menu */
 @media (max-width: 992px) {
@@ -137,23 +136,165 @@ nav img {
 
     #menu-links {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #EFEAE3;
         flex-direction: column;
         align-items: center;
+        height: 100vh;
+        background-color: black;
+    
+        
+       
+
+      
+        
+    
+   
+        
     }
 
     #menu-links.active {
         display: flex;
+        right: 0;
+        height: 250px;
+      
+        
+       
+        
+        
+
+       
     }
 
     #menu-links h4 {
         margin-top: 10px;
     }
+    #menu-links h4 a {
+        color: white;
+    }
+
 }
+.profile-dropdown {
+    position: relative;
+    width: fit-content;
+}
+
+.profile-dropdown-btn {
+    display: flex;
+   
+    align-items: center;
+    padding-top: 0;
+   
+  
+    cursor: pointer;
+   
+  
+   
+   
+   
+  
+
+}
+.user-menu{
+    display: flex;
+    align-items: center;
+    
+}
+.user-menu h4{
+    margin: 0;
+    padding: 0 0.5rem;
+    position: relative;
+
+}
+
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    padding-bottom: 8px;
+    border-radius: 50%;
+   
+    display: flex;
+    border: red solid;
+ 
+ 
+    align-items: center;
+
+
+}
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+   
+   
+}
+
+
+
+
+
+
+.profile-dropdown-list {
+    position: absolute;
+    top: 68px;
+    width: 220px;
+    right: 0;
+    background-color: black;
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: max-height 0.5s;
+    right: 0;
+ 
+}
+.profile-dropdown-list p{
+    color: white;
+    padding: 10px 15px;
+	margin: 0;
+
+}
+
+
+.profile-dropdown-list.active {
+    max-height: 500px;
+}
+
+.profile-dropdown-list-item {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+    transition: background-color 0.2s ease-in, padding-left 0.2s;
+}
+
+.profile-dropdown-list-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+}
+
+.profile-dropdown-list-item a i {
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: var(--secondary);
+    color: white;
+    line-height: 2.3rem;
+    text-align: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+    transition: margin-right 0.3s;
+}
+
+.profile-dropdown-list-item:hover {
+    padding-left: 1.5rem;
+    background-color: var(--secondary-light);
+}
+
 
 #center {
     height: 65vh;
@@ -172,22 +313,18 @@ nav img {
     line-height: 2vw;
     font-family: 'Jacquard', serif;
     padding-bottom: 15px;
-
-
-
-
 }
 
-.left-btn{
+.left-btn {
     display: inline-block;
     padding: 14px;
-
     margin-right: 4;
     background-color: black;
     color: white;
     border-radius: 12px;
- 
+    z-index: 20;
 }
+
 .left-btn:hover {
     background-color: #333;
     color: #fff;
@@ -212,8 +349,6 @@ nav img {
     width: 100%;
     object-fit: cover;
 }
-
-
 
 .videos h1 {
     font-size: 15vh;
@@ -265,7 +400,7 @@ nav img {
 
 .arts img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
 }
 
@@ -275,12 +410,10 @@ nav img {
 }
 
 #footer {
-    
     color: white;
     padding: 40px 20px;
     text-align: center;
     background-color: black;
- 
 }
 
 .footer-content {
@@ -295,6 +428,7 @@ nav img {
     flex: 1 1 30%;
     margin: 10px;
 }
+
 .footer-section h1,
 .footer-section h2 {
     font-family: 'Jacquard', serif;
@@ -325,6 +459,7 @@ nav img {
 .social-icons {
     display: flex;
     gap: 10px;
+    padding-left: 150px;
 }
 
 .social-icons a {
@@ -353,3 +488,21 @@ nav img {
     }
 }
 
+/* Additional Media Queries for Responsive Images */
+@media (max-width: 1200px) {
+    .arts {
+        flex: 1 1 calc(33.333% - 40px);
+    }
+}
+
+@media (max-width: 992px) {
+    .arts {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .arts {
+        flex: 1 1 calc(100% - 40px);
+    }
+}

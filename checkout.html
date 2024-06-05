@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Artiverse</title>
+    <link rel="stylesheet" href="Assets/css/checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard&family=Micro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        
+        <div id="checkout">
+            <h1>Checkout</h1>
+            <div class="checkout-container">
+                <form id="checkout-form">
+                    <div class="form-section">
+                        <h2>Shipping Address</h2>
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" required>
+                        
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                        
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" required>
+                        
+                        <label for="zip">Zip Code</label>
+                        <input type="text" id="zip" name="zip" required>
+                        
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h2>Payment Details</h2>
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" name="cardName" required>
+                        
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" name="cardNumber" required>
+                        
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                        
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" required>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h2>Special Instructions</h2>
+                        <label for="instructions">Instructions</label>
+                        <textarea id="instructions" name="instructions"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="checkout-btn">Complete Purchase</button>
+                </form>
+                
+                <div id="confirmation" class="confirmation-message">
+                    <h2>Thank you for your purchase!</h2>
+                    <p>Your order has been successfully placed. You will receive a confirmation email shortly.</p>
+                    <h3>Order Summary</h3>
+                    <p>Artwork Title: <span id="orderArtworkTitle"></span></p>
+                    <p>Order Number: <span id="orderNumber"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1>Artiverse</h1>
+                <p>Where imagination meets canvas.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-twitter-512.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Artiverse. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="Assets/js/min.js"></script>
+    <script>
+        const form = document.getElementById('checkout-form');
+        const confirmation = document.getElementById('confirmation');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('orderArtworkTitle').innerText = "Your Selected Artwork Title";
+            document.getElementById('orderNumber').innerText = "123456";
+            form.style.display = 'none';
+            confirmation.style.display = 'block';
+            gsap.fromTo('#confirmation', { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
+        });
+    </script>
+</body>
+</html>

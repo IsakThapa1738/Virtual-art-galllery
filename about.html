@@ -4,29 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Artiverse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Assets/css/about.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9+Charted&family=Micro+5+Charted&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main">
         <div id="page1">
-             <nav id="navbar">
+            <nav id="navbar">
                 <img src="Assets/img/logo.png" alt="Artiverse Logo">
                 <div id="nav-part2">
-                    <div class="menu-icon" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
                     <div id="menu-links">
                         <h4><a href="explore.html">Explore</a></h4>
                         <h4><a href="about.html">About</a></h4>
                         <h4><a href="login.html">Login</a></h4>
                         <h4><a href="login.html">Register</a></h4>
-                    </div>
+                        <div class="profile-dropdown">
+                            <div onclick="toggle()" class="profile-dropdown-btn">
+                                
+                                    <h4><a href="#" class="user-menu">Midi
+                                        <div class="profile-img">
+                                            <img src="Assets/img/client1.jpg" alt="">
+                                          
+                                          </div>
+                                    </a></h4>
+                        
+                        
+                            </div>
+                            <ul class="profile-dropdown-list">
+                                <li class="profile-dropdown-list-item">
+                                    <a href="useraccount.html">
+                                        <i class="fa-regular fa-user"></i>
+                                        Edit Profile
+                                    </a>
+                                </li>
+                                <li class="profile-dropdown-list-item">
+                                    <a href="#">
+                                        <i class="fa-regular fa-envelope"></i>
+                                        Inbox
+                                    </a>
+                                </li>
+                                <li class="profile-dropdown-list-item">
+                                    <a href="#">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                        Analytics
+                                    </a>
+                                </li>
+                                <li class="profile-dropdown-list-item">
+                                    <a href="#">
+                                        <i class="fa-solid fa-sliders"></i>
+                                        Settings
+                                    </a>
+                                </li>
+                                <li class="profile-dropdown-list-item">
+                                    <a href="#">
+                                        <i class="fa-regular fa-circle-question"></i>
+                                        Help & Support
+                                    </a>
+                                </li>
+                                <hr />
+                                <li class="profile-dropdown-list-item">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                        Log out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                
+                   
                 </div>
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                   
             </nav>
 
             <header id="about-header">

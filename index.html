@@ -10,25 +10,43 @@
 </head>
 <body>
     <div id="main">
+        <div id="page1">
     
             <nav id="navbar">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
                 <img src="Assets/img/logo.png" alt="Artiverse Logo">
                 <div id="nav-part2">
                     <div id="menu-links">
-                        <h4><a href="explore.html">Explore</a></h4>
-                        <h4><a href="about.html">About</a></h4>
-                        <h4><a href="login.html">Login</a></h4>
-                        <h4><a href="login.html">Register</a></h4>
+                        <h4>
+                            <a href="explore.html">
+                                <i class="fa-solid fa-earth-americas"></i>
+                                Explore</a></h4>
+                        <h4><a href="about.html">
+                            <i class="fa-solid fa-circle-info"></i>About</a></h4>
+                
+                        <h4><a href="login.html">
+                            <i class="fa-solid fa-user-plus"></i>Sign up</a></h4>
+                            <h4><a href="cart.html">
+                                <i class="fa-solid fa-cart-shopping"></i>Cart</i></a></h4>
+
+
                     </div>
+
+                        
+                    
                         <div class="profile-dropdown">
                             <div onclick="toggle()" class="profile-dropdown-btn">
                                 
                                     
-                                        <div class="profile-img">
+                                     
 
                                             <img src="Assets/img/client2.jpg" alt="">
                                             
-                                          </div>
+                                          
                                     
                         
                         
@@ -78,16 +96,12 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        
                         
                 
                    
                 </div>
-                    <div class="menu-icon" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
+                    
                    
             </nav>
             <div id="center">
@@ -102,6 +116,7 @@
             <div class="videos">
                 <video autoplay loop muted src="Assets/img/istockphoto-1366439220-640_adpp_is.mp4"></video>
             </div>
+        </div>
         </div>
         <div id="explore-link">
             <a href="explore.html">Explore Arts</a>

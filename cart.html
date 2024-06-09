@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artists | Artiverse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="Assets/css/artists.css">
+    <link rel="stylesheet" href="Assets/css/cart.css">
+    <title>Cart | Artiverse</title>
 </head>
+
 <body>
     <div id="main">
         <nav id="navbar">
@@ -102,42 +104,52 @@
                
         </nav>
         
-        <div id="artists">
-            <h1>Our Artists</h1>
-            <div class="artists-grid">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="Assets/img/client1.jpg" alt="Artist 1">
+        <div class="cart-container">
+            <div class="cart-title">
+                <h1>Your Cart</h1>
+            </div>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="Assets/img/art1.jpg" alt="Art Item">
                     </div>
-                    <div class="artist-info">
-                        <h2>Artist Name 1</h2>
-                        <p>Brief description of Artist 1's work and style.</p>
-                        <a href="artistprofile.html" class="profile-link" onclick="openProfilePopup(event)">View Profile</a>
+                    <div class="item-details">
+                        <h2>Art Title</h2>
+                        <p>Artist Name</p>
+                        <p>$100.00</p>
+                    </div>
+                    <div class="item-actions">
+                        <input type="number" value="1" min="1">
+                        <button class="remove-btn">Remove</button>
                     </div>
                 </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="Assets/img/client2.jpg" alt="Artist 2">
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="Assets/img/art2.jpg" alt="Art Item">
                     </div>
-                    <div class="artist-info">
-                        <h2>Artist Name 2</h2>
-                        <p>Brief description of Artist 2's work and style.</p>
-                        <a href="artistprofile.html" class="profile-link" onclick="openProfilePopup(event)">View Profile</a>
-                
+                    <div class="item-details">
+                        <h2>Art Title</h2>
+                        <p>Artist Name</p>
+                        <p>$150.00</p>
+                    </div>
+                    <div class="item-actions">
+                        <input type="number" value="1" min="1">
+                        <button class="remove-btn">Remove</button>
                     </div>
                 </div>
-                <!-- Add more artist cards as needed -->
+                <!-- More cart items as needed -->
+            </div>
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-details">
+                    <p>Subtotal: $250.00</p>
+                    <p>Tax: $20.00</p>
+                    <p>Total: $270.00</p>
+                </div>
+                <a href="checkout.html"><button class="checkout-btn">Proceed to Checkout</button></a>
             </div>
         </div>
-        <div id="profilePopup" class="profile-popup">
-            <div class="profile-popup-content">
-                <span class="close-btn" onclick="closeProfilePopup()">&times;</span>
-                <h2>Artist Name</h2>
-                <p><strong>Address:</strong> 123 Art Street, Art City</p>
-                <p><strong>Works:</strong> Description of works</p>
-                <p><strong>Phone no:</strong> 899999009</p>
-            </div>
-        </div>
+        
     </div>
 
     <footer id="footer">
@@ -170,11 +182,8 @@
             <p>&copy; 2024 Artiverse. All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <script src="Assets/js/min.js"></script>
-   
-        
-    
 </body>
+
 </html>

@@ -44,7 +44,7 @@ html, body {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
-    border: #000 solid;
+    border: #000 solid 1px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: left;
 }

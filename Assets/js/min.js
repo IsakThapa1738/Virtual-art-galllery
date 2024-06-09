@@ -72,7 +72,26 @@ function openProfilePopup(event) {
     }
 }
 
+
+
+// For artists profile page to pop up
+    function openProfilePopup(event) {
+        event.preventDefault()
+        document.getElementById('profilePopup').style.display = 'flex';
+    }
+
+    function closeProfilePopup() {
+        document.getElementById('profilePopup').style.display = 'none';
+    }
+
+
+
 console.log("hello")
+
+
+
+
+
 
 
 

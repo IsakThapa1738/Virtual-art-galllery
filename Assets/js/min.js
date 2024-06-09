@@ -91,6 +91,26 @@ console.log("hello")
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const uploadBtn = document.querySelector(".upload-btn");
+    const uploadModal = document.querySelector(".upload-modal");
+    const cancelBtn = document.querySelector(".cancel-btn");
+
+    uploadBtn.addEventListener("click", function() {
+        uploadModal.classList.add("visible");
+    });
+
+    cancelBtn.addEventListener("click", function() {
+        uploadModal.classList.remove("visible");
+    });
+
+    // Form submission logic can be added here
+});
+
+
+
+
+
 
 
 

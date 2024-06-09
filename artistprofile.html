@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Assets/css/artistprofile.css">
+    <title>Artist Profile | Artiverse</title>
+</head>
+
+<body>
+    <div class="background-text">ARTIVERSE</div>
+    <div class="container">
+        <div class="profile-header">
+            <h1>Artist Profile</h1>
+            <button class="btn upload-btn">Upload New Artwork</button>
+        </div>
+        <div class="artworks">
+            <h2>Your Artworks</h2>
+            <div class="artwork">
+                <img src="https://assets.telegraphindia.com/telegraph/2022/Oct/1666424870_untitled-design-23.jpg" alt="Artwork 1">
+                <div class="artwork-info">
+                    <h3>Artwork Title</h3>
+                    <p>Description of the artwork.</p>
+                    <div class="action-buttons">
+                        <button class="btn edit-btn">Edit</button>
+                        <button class="btn delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for more artworks -->
+        </div>
+        <div class="upload-modal hidden">
+            <form id="upload-form">
+                <h2>Upload New Artwork</h2>
+                <input type="text" placeholder="Title" required>
+                <textarea placeholder="Description" required></textarea>
+                <input type="file" accept="image/*" required>
+                <button type="submit" class="btn">Upload</button>
+                <button type="button" class="btn cancel-btn">Cancel</button>
+            </form>
+        </div>
+        <div class="edit-modal hidden">
+            <form id="edit-form">
+                <h2>Edit Artwork</h2>
+                <input type="text" placeholder="Title" required>
+                <textarea placeholder="Description" required></textarea>
+                <input type="file" accept="image/*">
+                <button type="submit" class="btn">Save Changes</button>
+                <button type="button" class="btn cancel-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="Assets/js/artist-profile.js"></script>
+</body>
+
+</html>
+
+<script src="Assets/js/min.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const uploadBtn = document.querySelector(".upload-btn");
+        const uploadModal = document.querySelector(".upload-modal");
+        const cancelBtn = document.querySelector(".cancel-btn");
+    
+        uploadBtn.addEventListener("click", function() {
+            uploadModal.classList.add("visible");
+        });
+    
+        cancelBtn.addEventListener("click", function() {
+            uploadModal.classList.remove("visible");
+        });
+    
+        // Form submission logic can be added here
+    });
+    </script>
+</body>
+
+</html>

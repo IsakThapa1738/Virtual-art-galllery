@@ -5,16 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="Assets/css/artistprofile.css">
-    <title>Artist Profile | Artiverse</title>
+    <link rel="stylesheet" href="Assets/css/artistdashboard.css">
+    <title>Artist Dashboard | Artiverse</title>
 </head>
 
 <body>
     <div class="background-text">ARTIVERSE</div>
     <div class="container">
         <div class="profile-header">
-            <h1>Artist Profile</h1>
+            <div class="profile-info">
+                <img src="Assets/img/client1.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="profile-text">
+                    <h1>Artist Name</h1>
+                    <p>Short bio about the artist.</p>
+                </div>
+            </div>
             <button class="btn upload-btn">Upload New Artwork</button>
+        </div>
+        <div class="dashboard-stats">
+            <div class="stat">
+                <h3>Total Artworks</h3>
+                <p>25</p>
+            </div>
+            <div class="stat">
+                <h3>Artworks Sold</h3>
+                <p>10</p>
+            </div>
+            <div class="stat">
+                <h3>Total Views</h3>
+                <p>1500</p>
+            </div>
+        </div>
+        <div class="recent-activities">
+            <h2>Recent Activities</h2>
+            <ul>
+                <li>Sold "Sunset Bliss" on 20th June</li>
+                <li>Uploaded "Moonlight Sonata" on 18th June</li>
+                <li>Edited "Starry Night" on 15th June</li>
+            </ul>
         </div>
         <div class="artworks">
             <h2>Your Artworks</h2>
@@ -52,27 +80,37 @@
             </form>
         </div>
     </div>
-    <script src="Assets/js/artist-profile.js"></script>
-</body>
+    <script>
+        
 
-</html>
+document.addEventListener("DOMContentLoaded", function() {
+    const uploadBtn = document.querySelector(".upload-btn");
+    const uploadModal = document.querySelector(".upload-modal");
+    const cancelBtn = document.querySelector(".upload-modal .cancel-btn");
+    const editButtons = document.querySelectorAll(".edit-btn");
+    const editModal = document.querySelector(".edit-modal");
+    const editCancelBtn = document.querySelector(".edit-modal .cancel-btn");
 
-<script src="Assets/js/min.js"></script>
-    <script>document.addEventListener("DOMContentLoaded", function() {
-        const uploadBtn = document.querySelector(".upload-btn");
-        const uploadModal = document.querySelector(".upload-modal");
-        const cancelBtn = document.querySelector(".cancel-btn");
-    
-        uploadBtn.addEventListener("click", function() {
-            uploadModal.classList.add("visible");
-        });
-    
-        cancelBtn.addEventListener("click", function() {
-            uploadModal.classList.remove("visible");
-        });
-    
-        // Form submission logic can be added here
+    uploadBtn.addEventListener("click", function() {
+        uploadModal.classList.add("visible");
     });
+
+    cancelBtn.addEventListener("click", function() {
+        uploadModal.classList.remove("visible");
+    });
+
+    editButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            editModal.classList.add("visible");
+        });
+    });
+
+    editCancelBtn.addEventListener("click", function() {
+        editModal.classList.remove("visible");
+    });
+
+    
+});
     </script>
 </body>
 

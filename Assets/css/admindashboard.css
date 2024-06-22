@@ -33,8 +33,8 @@ body {
     border-radius: 30px;
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
+    width: 80%;
+    max-width: 1200px;
     min-height: 600px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -47,9 +47,26 @@ body {
     align-items: center;
 }
 
-.profile-header h1 {
+.profile-header .profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-header .profile-info .profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.profile-header .profile-info .profile-text h1 {
     font-size: 2em;
     color: black;
+}
+
+.profile-header .profile-info .profile-text p {
+    font-size: 0.9em;
+    color: #666;
 }
 
 .profile-header .btn {
@@ -67,12 +84,115 @@ body {
     background-color: #333;
 }
 
-/* Artworks */
-.artworks {
-    margin-top: 20px;
+/* Dashboard Stats */
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-.artworks h2 {
+.dashboard-stats .stat {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.dashboard-stats .stat h3 {
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.dashboard-stats .stat p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Recent Activities */
+.recent-activities {
+    margin: 20px 0;
+}
+
+.recent-activities h2 {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.recent-activities ul {
+    list-style: none;
+}
+
+.recent-activities ul li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* User Management */
+.user-management {
+    margin: 20px 0;
+}
+
+.user-management h2 {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.user-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.user-management table th, .user-management table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-management table th {
+    background-color: #f0f0f0;
+}
+
+.user-management .btn {
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.user-management .edit-btn {
+    background-color: orange;
+}
+
+.user-management .edit-btn:hover {
+    background-color: darkorange;
+}
+
+.user-management .delete-btn {
+    background-color: red;
+}
+
+.user-management .delete-btn:hover {
+    background-color: darkred;
+}
+
+/* Artwork Management */
+.artwork-management {
+    margin: 20px 0;
+}
+
+.artwork-management h2 {
     font-size: 1.5em;
     color: black;
     margin-bottom: 10px;
@@ -113,14 +233,9 @@ body {
 }
 
 .action-buttons {
-   
-    top: -50px;
-    left: 360px;
-    flex-direction: column;
-    align-items: flex-end;
-    
-    position: relative;
-    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .action-buttons .btn {
@@ -131,8 +246,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 20px;
-  
+    margin-left: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -225,4 +339,38 @@ body {
 .upload-modal.visible, .edit-modal.visible {
     visibility: visible;
     opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard-stats {
+        flex-direction: column;
+    }
+
+    .dashboard-stats .stat {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .recent-activities ul li {
+        font-size: 0.8em;
+    }
+
+    .user-management table th, .user-management table td {
+        font-size: 0.8em;
+    }
+
+    .artwork img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-header .profile-info {
+        margin-bottom: 10px;
+    }
 }

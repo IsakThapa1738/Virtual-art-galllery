@@ -1,0 +1,51 @@
+/* Specific Styles for Manage Artists Page */
+
+.artist-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.artist-management table th, .artist-management table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.artist-management table th {
+    background-color: #f0f0f0;
+}
+
+.artist-management table td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.artist-management .btn {
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.artist-management .edit-btn {
+    background-color: orange;
+}
+
+.artist-management .edit-btn:hover {
+    background-color: darkorange;
+}
+
+.artist-management .delete-btn {
+    background-color: red;
+}
+
+.artist-management .delete-btn:hover {
+    background-color: darkred;
+}
